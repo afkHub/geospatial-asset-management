@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-from django.contrib.gis.db import models
+#from django.contrib.gis.db import models
 
 class AssetTypeSymbol(models.Model):
     name = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
@@ -26,7 +26,7 @@ class Asset(models.Model):
     #objects = models.GeoManager()
     elevation = models.FloatField()
     crs = models.IntegerField(null=True)
-    geom = models.GeometryField(srid= 3857, blank= True, null=False)
+    #geom = models.GeometryField(srid= 3857, blank= True, null=False)
 
     def __str__(self):
         return self.name
